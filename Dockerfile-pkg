@@ -1,0 +1,6 @@
+FROM alpine:latest
+RUN mkdir -p /app
+WORKDIR /app
+COPY dist/app /app/app
+EXPOSE 3000
+CMD ["/app/app"]

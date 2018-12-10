@@ -4,12 +4,18 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "build": "ncc build index.js",
+    "package": "pkg -t node10.4.1-alpine-x64 -o dist/app dist/index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "polka": "^0.5.1"
+  },
+  "devDependencies": {
+    "@zeit/ncc": "^0.5.3",
+    "pkg": "^4.3.5"
   }
 }
