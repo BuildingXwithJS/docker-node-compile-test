@@ -1,4 +1,9 @@
 FROM alpine:latest
+# install required libs, docker-compose and yarn
+RUN apk update && \
+  apk add --no-cache libstdc++ libgcc ca-certificates && \
+  rm -rf /var/cache/apk/*
+
 RUN mkdir -p /app
 WORKDIR /app
 COPY dist/app /app/app

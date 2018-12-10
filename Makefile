@@ -6,3 +6,12 @@ build-ncc:
 
 build-pkg:
 	./tools/build-pkg.sh
+
+startup-docker:
+	./tools/startup-docker.sh
+
+startup-ncc:
+	./tools/startup-ncc.sh
+
+startup-pkg:
+	./tools/startup-pkg.sh
